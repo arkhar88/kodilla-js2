@@ -4,11 +4,17 @@
 
 /*console.log('make it stop');*/
 
-var base = 6;
-var height = 10;
+var a = 6;
+var b = 10;
+var value = (a * a) + (2 * a * b) - (b * b);
 
-var compute_triangle = function(a, h) {
-    return (a * h) / 2;
+var is_above_zero = function(value) {
+    if (value === 0) {
+        console.log('Value = ' + value);
+        return 0;
+    }
+    var above_zero = value > 0 ? true : false;
+    console.log('Is value above zero? The answear is: ' + above_zero);
 };
 
-console.log('Triangle area for base: ' + base + ' and height: ' + height + ' equals ' + compute_triangle(base, height));
+is_above_zero(value);
