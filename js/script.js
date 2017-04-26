@@ -6,15 +6,14 @@
 
 var a = 6;
 var b = 10;
-var value = (a * a) + (2 * a * b) - (b * b);
 
-var is_above_zero = function(value) {
-    if (value === 0) {
-        console.log('Value = ' + value);
-        return 0;
-    }
-    var above_zero = value > 0 ? true : false;
-    console.log('Is value above zero? The answear is: ' + above_zero);
+var value = function(a, b) {
+    return (a * a) + (2 * a * b) - (b * b);
 };
 
-is_above_zero(value);
+var v = value(a, b);
+if (v === 0) console.log('Value = ' + v);
+else {
+    if (v > 0) console.log('Value is above zero');
+    else console.log('Value is below zero');
+}
